@@ -36,7 +36,7 @@ Only two permissions are requested:
 
 No persistent host permissions, injected content scripts, remote code, analytics, or background network requests. Captures are deleted from session storage when the editor reads them. Unopened captures expire after five minutes and are cleaned on the next capture or when Chrome clears the extension session. The editor keeps the image and undo history in tab memory. Downloaded files are saved by Chrome.
 
-Redaction is a solid pixel replacement in the flattened export. Undo can recover the original in the editor; it cannot recover it from the exported redacted image. Review the output before sharing. [Read the full privacy policy](extension/privacy.html).
+Redaction is a solid pixel replacement in the flattened export. Undo can recover the original in the editor; it cannot recover it from the exported redacted image. Review the output before sharing. [Read the full privacy policy](PRIVACY.md).
 
 ## Development
 

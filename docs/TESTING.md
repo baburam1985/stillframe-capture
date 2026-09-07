@@ -7,7 +7,8 @@ Verified September 7, 2026, on macOS with Google Chrome.
 - 15 Node tests: capture ordering, active-tab changes, closed editor/window failures, session quota failure, single-use handoff, expiry cleanup, missing tab, reverse drag geometry, bounds, CSS/Retina scaling, invalid rectangles, and safe filenames.
 - Source checks: Manifest V3, only activeTab/storage permissions, no host permissions or content scripts, expected icons/dimensions, JavaScript parsing, no network/eval calls or inline scripts.
 - Six real Chrome Canvas tests: 1,200 opaque redaction pixels and unchanged neighbors; crop dimensions/source pixels; crop after redaction and original preservation; visible arrow/outline pixels; PNG decode with flattened redaction; JPEG decode with expected dimensions.
-- Chrome editor interaction: sample opens, precise redaction, crop to 1150 × 325, undo/redo, and PNG download request.
+- Chrome editor interaction: sample opens, precise redaction, crop to 1150 × 325, undo/redo, and PNG/JPEG downloads. Both downloaded files were inspected and have the expected 1150 × 325 dimensions.
+- GitHub Actions run 34101752714 completed successfully on commit 3d963449c44a7502f9974e3d9e9d45c59f5c53cb.
 
 ## Pending release gate
 

@@ -19,6 +19,10 @@ with zipfile.ZipFile(target, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
         info.compress_type = zipfile.ZIP_DEFLATED
         info.external_attr = 0o644 << 16
         archive.writestr(info, file.read_bytes())
+    license_info = zipfile.ZipInfo('LICENSE', date_time=(2026, 1, 1, 0, 0, 0))
+    license_info.compress_type = zipfile.ZIP_DEFLATED
+    license_info.external_attr = 0o644 << 16
+    archive.writestr(license_info, (ROOT / 'LICENSE').read_bytes())
 digest = hashlib.sha256(target.read_bytes()).hexdigest()
 (out / 'SHA256SUMS').write_text(f'{digest}  {target.name}\n')
 print(f'{target}\nSHA256 {digest}')
